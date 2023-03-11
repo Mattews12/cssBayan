@@ -5,5 +5,18 @@
 /* Body start */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #8590bb;
 }
+.accordion {
+    margin: 0 auto;
+    width: 45%;
+}
+.accordion li{
+    list-style: none;
+    borde
+}
+.content {
+}
+
+
 /* Body end */
