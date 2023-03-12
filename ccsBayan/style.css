@@ -65,8 +65,13 @@ img:active{
 
 .accordion input[type="radio"]:hover + label + .content {
     max-height: none;
-    
 }
+
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: none;
+}
+
 
 
 /* Body end */
