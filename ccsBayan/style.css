@@ -7,15 +7,65 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #8590bb;
 }
+
 .accordion {
     margin: 0 auto;
     width: 45%;
 }
-.accordion li{
+
+.accordion li {
     list-style: none;
-    borde
+    width: 100%;
+    padding: 0.63rem;
+    margin: 0.63rem;
+    /* ~10px */
+    background-color: #d8dd8e;
+    border-radius: 0.63rem;
+    box-shadow: 0.13rem 0.13rem 0.13rem 0.13rem #6b6d57;
 }
-.content {
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 0.63rem;
+    font-size: 1.13rem;
+    /* ~18px */
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label {
+    /* !px */
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* !px */
+}
+
+input[type="radio"] {
+    display: none;
+}
+.accordion .content {
+    padding: 0 0.63rem;
+    max-height: 0;
+    overflow: hidden;
+    transition-duration:  1s;
+
+}
+
+.content img{
+    max-width: 100%;
+    transform: scale(1);
+    transition-duration:  0.5s;
+}
+
+img:active{
+    opacity: 80%;
+}
+
+.accordion input[type="radio"]:hover + label + .content {
+    max-height: none;
+    
 }
 
 
