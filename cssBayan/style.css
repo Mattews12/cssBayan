@@ -11,66 +11,111 @@ body {
 .accordion {
     margin: 0 auto;
     width: 45%;
+    padding: 0;
 }
 
 .accordion li {
     list-style: none;
     width: 100%;
     padding: 0.63rem;
-    margin: 0.63rem;
     /* ~10px */
     background-color: #d8dd8e;
-    border-radius: 0.63rem;
-    box-shadow: 0.13rem 0.13rem 0.13rem 0.13rem #6b6d57;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordion-text {
+    display: inline;
+}
+
+.accordion-ico {
+    max-width: 2rem;
+    display: inline;
+    transition-duration: 0.5s;
+     opacity: 0; 
+
 }
 
 .accordion li label {
-    display: flex;
+    display: block;
     align-items: center;
-    padding: 0.63rem;
-    font-size: 1.13rem;
+    padding: 1rem;
+    font-size: 1.3rem;
     /* ~18px */
     font-weight: 500;
     cursor: pointer;
 }
 
 label {
-    /* !px */
     margin-left: auto;
     font-size: 1.5rem;
     font-weight: 500;
-    /* !px */
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #1312126e;
 }
+
+.label-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 input[type="radio"] {
     display: none;
 }
+
 .accordion .content {
     padding: 0 0.63rem;
     max-height: 0;
     overflow: hidden;
-    transition-duration:  1s;
-
+    transition-duration: 1s;
 }
 
-.content img{
+.content span img {
     max-width: 100%;
-    transform: scale(1);
-    transition-duration:  0.5s;
+    transition-duration: 0.5s;
+    padding-top: 2rem;
 }
 
-img:active{
+
+
+/* ____________ */
+.accordion:hover .accordion-ico {
+    opacity: 1;
+}
+
+.accordion input[type="radio"]:hover+label .content {
+    max-height: 31rem;
+}
+
+.accordion input[type="radio"]:checked + label .content {
+    max-height: 31rem;
+}
+
+.content:hover,
+.label:hover {
+    max-height: 31rem;
+}
+
+img:hover {
     opacity: 80%;
 }
-
-.accordion input[type="radio"]:hover + label + .content {
-    max-height: none;
+img:active {
+    filter: brightness(50%);
 }
 
+.accordion input[type="radio"]:hover + label .label-header .accordion-ico{
+    transform: rotate(45deg)
 
-.accordion input[type="radio"]:checked + label + .content {
-    max-height: none;
 }
+.accordion input[type="radio"]:checked + label .label-header .accordion-ico{
+    transform: rotate(45deg)
+
+}
+/* ____________ */
 
 
 
