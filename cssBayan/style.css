@@ -1,0 +1,179 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+/* Fonts end*/
+
+/* Body start */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #8590bb;
+}
+
+.accordion {
+    margin: 0 auto;
+    width: 45%;
+    padding: 0;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    background-color: #d8dd8e;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.accordion-text {
+    display: inline;
+}
+
+.accordion-ico {
+    max-width: 2rem;
+    display: inline;
+    transition-duration: 0.5s;
+    opacity: 0cccccccccccccc;
+
+}
+
+.accordion li label {
+    display: block;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label {
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    border-top: 0.1rem solid #1312126e;
+}
+
+.label-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    padding: 0 0.63rem;
+    max-height: 0;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+
+.content span img {
+    max-width: 100%;
+    transition-duration: 0.5s;
+    padding-top: 2rem;
+}
+
+
+
+/* ____________ */
+/* ! Переместил в media-hover */
+/* .accordion:hover .accordion-ico {
+    opacity: 1;
+}
+
+.accordion input[type="radio"]:hover+label .content {
+    max-height: 35rem;
+    margin: 1rem 0 2rem 0;
+} */
+
+.accordion input[type="radio"]:checked+label .content {
+    max-height: 35rem;
+    margin: 1rem 0 2rem 0;
+}
+
+/* ! Переместил в media-hover */
+/* .content:hover,
+.label:hover {
+    max-height: 35rem;
+}
+
+img:hover {
+    opacity: 80%;
+}
+
+.accordion input[type="radio"]:hover + label .label-header .accordion-ico{
+    transform: rotate(45deg);
+}  */
+
+.accordion input[type="radio"]:checked+label .label-header .accordion-ico {
+    transform: rotate(45deg);
+}
+
+label:active {
+    filter: brightness(65%);
+}
+
+label:active .label-header {
+    opacity: 0.5;
+}
+
+
+
+/* ____________ */
+
+
+/* Media */
+/* Media hover */
+@media (hover: hover) {
+    .accordion:hover .accordion-ico {
+        opacity: 1;
+    }
+
+    .accordion input[type="radio"]:hover+label .content {
+        max-height: 35rem;
+        margin: 1rem 0 2rem 0;
+    }
+
+    .content:hover,
+    .label:hover {
+        max-height: 35rem;
+    }
+
+    img:hover {
+        opacity: 80%;
+    }
+
+    .accordion input[type="radio"]:hover+label .label-header .accordion-ico {
+        transform: rotate(45deg);
+    }
+
+}
+
+/* Media hover end */
+
+@media (max-width:820px) {
+    .accordion li label {
+        font-size: 1.5rem;
+    }
+
+    .accordion {
+        width: 80%;
+    }
+}
+
+@media (max-width:320px) {
+    .accordion li label {
+        font-size: 2rem;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+}
+
+/* Media end */
+/* Body end */
