@@ -109,11 +109,12 @@ img:hover {
     transform: rotate(45deg);
 }  */
 
-.accordion input[type="radio"]:checked + label .label-header .accordion-ico{
+.accordion input[type="radio"]:checked+label .label-header .accordion-ico {
     transform: rotate(45deg);
 }
+
 label:active {
-    filter: brightness(65%)
+    filter: brightness(65%);
 }
 
 label:active .label-header {
